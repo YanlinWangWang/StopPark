@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src = "{{asset('public/assets/js/jquery-1.8.3.min.js')}}"></script>
+<script type="text/javascript">
+
+    <script src = "{{asset('public/assets/js/jquery-1.8.3.min.js')}}"></script>
+<script type="text/javascript">
+
+    window.onload = function () {
+        //通过js取到数据
+        var arr1 =document.getElementsByClassName("aaaa")[0].innerHTML;
+        var arr2 =document.getElementsByClassName("aaaa")[1].innerHTML;
+        var arr3 =document.getElementsByClassName("aaaa")[2].innerHTML;
+        var arr4 =document.getElementsByClassName("aaaa")[3].innerHTML;
+        //保存在数组当中
+
+        var data = [arr1,arr2,arr3,arr4];
+
+        var background = document.getElementById('background');
+        if (background.getContext){
+            var b = background.getContext('2d');
+
+            // Line graph
+            b.lineWidth = 1;//线条宽度
+            b.strokeStyle = '#024';//描边属性颜色
+            b.beginPath();//以坐标点为参考点
+            b.moveTo(0,25);//参考线高度，从上到下排列列高大小为25px
+            b.lineTo(600,25);//参考线长度及列高，长度大小为600px,,高度为275px
+            b.moveTo(0,50);//参考线高度，从上到下排列列高大小为50px，高度为250px
+            b.lineTo(600,50);
+            b.moveTo(0,75);
+            b.lineTo(600,75);
+            b.moveTo(0,100);
+            b.lineTo(600,100);
+            b.moveTo(0,125);
+            b.lineTo(600,125);
+            b.moveTo(0,150);
+            b.lineTo(600,150);
+            b.moveTo(0,175);
+            b.lineTo(600,175);
+            b.moveTo(0,200);
+            b.lineTo(600,200);
+            b.moveTo(0,225);
+            b.lineTo(600,225);
+            b.moveTo(0,250);
+            b.lineTo(600,250);
+            b.moveTo(0,275);
+            b.lineTo(600,275);
+            b.stroke();
+        }
+
+        // LINE GRAPH
+        var graph = document.getElementById('canvas');
+        if (graph.getContext){
+            var g = graph.getContext('2d');
+
+            g.lineWidth = 2;
+            g.strokeStyle = '#ff0';
+            g.shadowColor = '#ff0';
+            g.shadowOffsetX = 0;//参考点坐标
+            g.shadowOffsetY = 0;//
+            g.shadowBlur = 20;//阴影模糊距离
+
+            g.beginPath();
+            g.moveTo(0,300);//参考框的高度
+
+            for (var i = 0, l = data.length; i > l; i++) {
+                g.lineTo((i + 1) * 85,data[i]);//调整统计表上面点的个数确定,点与点之间的距离为85PX
+            }
+            g.stroke();
+        }
+
+
+
+    }
+        window.onload = function () {
+            //通过js取到数据
+            var arr1 = document.getElementsByClassName("aaaa")[0].innerHTML;
+            var arr2 = document.getElementsByClassName("aaaa")[1].innerHTML;
+            var arr3 = document.getElementsByClassName("aaaa")[2].innerHTML;
+            var arr4 = document.getElementsByClassName("aaaa")[3].innerHTML;
+            //保存在数组当中
+
+            var data = [arr1, arr2, arr3, arr4];
+
+            var background = document.getElementById('background');
+            if (background.getContext) {
+                var b = background.getContext('2d');
+
+                // Line graph
+                b.lineWidth = 1;//线条宽度
+                b.strokeStyle = '#024';//描边属性颜色
+                b.beginPath();//以坐标点为参考点
+                b.moveTo(0, 25);//参考线高度，从上到下排列列高大小为25px
+                b.lineTo(600, 25);//参考线长度及列高，长度大小为600px,,高度为275px
+                b.moveTo(0, 50);//参考线高度，从上到下排列列高大小为50px，高度为250px
+                b.lineTo(600, 50);
+                b.moveTo(0, 75);
+                b.lineTo(600, 75);
+                b.moveTo(0, 100);
+                b.lineTo(600, 100);
+                b.moveTo(0, 125);
+                b.lineTo(600, 125);
+                b.moveTo(0, 150);
+                b.lineTo(600, 150);
+                b.moveTo(0, 175);
+                b.lineTo(600, 175);
+                b.moveTo(0, 200);
+                b.lineTo(600, 200);
+                b.moveTo(0, 225);
+                b.lineTo(600, 225);
+                b.moveTo(0, 250);
+                b.lineTo(600, 250);
+                b.moveTo(0, 275);
+                b.lineTo(600, 275);
+                b.stroke();
+            }
+
+            // LINE GRAPH
+            var graph = document.getElementById('canvas');
+            if (graph.getContext) {
+                var g = graph.getContext('2d');
+
+                g.lineWidth = 2;
+                g.strokeStyle = '#ff0';
+                g.shadowColor = '#ff0';
+                g.shadowOffsetX = 0;//参考点坐标
+                g.shadowOffsetY = 0;//
+                g.shadowBlur = 20;//阴影模糊距离
+
+                g.beginPath();
+                g.moveTo(0, 300);//参考框的高度
+
+                for (var i = 0, l = data.length; l<i; i++) {
+                    g.lineTo((i + 1) * 85, data[i]);//调整统计表上面点的个数确定,点与点之间的距离为85PX
+                }
+                g.stroke();
+            }
+
+
+        }
+
+</body>
+</html>

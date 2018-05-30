@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6ecf5a6e-f1dd-41a3-9c06-a25c53228ed8" name="Default" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="$APPLICATION_HOME_DIR$/bin/E:\Laravel_APP\UPUPW_AP5.6\Apache2\bin" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
